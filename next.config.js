@@ -1,5 +1,5 @@
 module.exports ={
-    env:{MONGODB_URI:'mongodb+srv://test:2234@earllee333.qx4rs.mongodb.net/node-tuts?retryWrites=true&w=majority',
+    env:{MONGODB_URI:'mongodb+srv://test:2234@earllee333.qx4rs.mongodb.net/1992shisha?retryWrites=true&w=majority',
     },
     target: 'experimental-serverless-trace'
 

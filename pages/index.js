@@ -120,8 +120,9 @@ export default function Home() {
                                 <Button type="submit">Submit</Button>
                             </Form>
           }
-                            
+        
         </div>
+        <footer>CopyRight&&Hung</footer>
       </div>
      
       
