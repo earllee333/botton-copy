@@ -24,7 +24,7 @@ export default function Home() {
   },[errors])
   const createNote = async()=>{
     try{
-      const res = await fetch('https://1992shisha.netlify.app',{
+      const res = await fetch('https://1992shisha.netlify.app/api/hh',{
         method:'POST',
         headers:{
           "Accept":"application/json",
