@@ -21,7 +21,7 @@ const Note = ({note}) => {
     const deleteNote = async ()=>{
         const noteId=router.query.id;
         try{
-            const deleted = await fetch(`http://localhost:3000/api/hh/${noteId}`,{
+            const deleted = await fetch(`https://botton-copy.vercel.app/api/hh/${noteId}`,{
                 method:"DELETE"
             })
             router.push('/content');

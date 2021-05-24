@@ -24,7 +24,7 @@ export default function Home() {
   },[errors])
   const createNote = async()=>{
     try{
-      const res = await fetch('http://localhost:3000/api/hh',{
+      const res = await fetch('https://botton-copy.vercel.app/api/hh',{
         method:'POST',
         headers:{
           "Accept":"application/json",

@@ -42,7 +42,7 @@ const Content = ({notes}) => {
 export default Content;
 
 Content.getInitialProps=async()=>{
-    const res = await fetch('http://localhost:3000/api/hh')
+    const res = await fetch('https://botton-copy.vercel.app/api/hh')
     const {data} = await res.json()
     return{notes:data}
 }
