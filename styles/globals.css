@@ -44,7 +44,9 @@ color:rgb(231, 203, 203)}
 }
 .grid{display:grid;
   grid-template-columns:repeat(3,1fr);
-  grid-gap:10px;}
+  grid-gap:10px;
+max-width: 400px;
+margin:10px auto}
   .header a{text-decoration:none;color:rgb(43, 122, 226);font-size:20px;}  
   .note-container h1{color:rgba(12, 12, 238, 0.692)}
 .extra :hover{color:rgb(230, 76, 76)}
@@ -53,8 +55,9 @@ color:rgb(231, 203, 203)}
 .extra{padding:10px;}
 #time p{color:red}
 .time p{font-size:8px;display:inline-block}
-#icon {border:1px solid ;border-radius:20px;padding:6px;margin:5px;background:rgba(240, 236, 236, 0.308);
+#icon {padding:6px;margin:5px;background:rgba(240, 236, 236, 0.308);
 max-width:110px}
 .notes-container{text-align:center;margin-top:20px;}
 .notes-container h1{color:rgba(12,12,238,0.692);padding:20px}
 .input {max-width: 220px; margin:0 auto}
+.grid.wrapper.ui.card{border:2px solid red;border-radius:20px}
