@@ -43,10 +43,11 @@ const Note = ({note}) => {
                 :
                 <>
                     <h1>{note.name}</h1>
+                    <p>Booking day{note.date}</p>
                     <p>{note.email}</p>
-                    <p>{note.phone}</p>
-                    <p>{note.number}</p>
-                    <p>{note.createdAt}</p>
+                    <p>phone:{note.phone}</p>
+                    <p>member{note.number}</p>
+                    <p>createAt:{note.createdAt}</p>
                     <Button color="red" onClick={open}>
                         Delete
                     </Button>

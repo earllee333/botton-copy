@@ -4,13 +4,14 @@ import styles from '../styles/Home.module.css'
 import {useState,useEffect, createContext} from 'react'
 import {useRouter} from'next/router'
 import {Button,Form,Loader} from 'semantic-ui-react'
-import Link from 'next/link'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 export default function Home() {
-  const [form,setForm] = useState({name:'',email:'',phone:'',number:''})
+  const [form,setForm] = useState({name:'',email:'',phone:'',number:'',date:''})
   const[isSubmitting,setIsSubmitting]=useState(false)
   const [errors,setErrors]=useState({})
   const router = useRouter()
-  
+  const [selectedDate,setSelectedDate]=useState(null)
   useEffect(() => {
       if(isSubmitting){
         if(Object.keys(errors).length === 0){
@@ -43,12 +44,19 @@ export default function Home() {
     let errs = validate();
     setErrors(errs)
     setIsSubmitting(true)
+    console.log(form)
   }
 
   const handleChange = (e)=>{
     setForm({
       ...form,
         [e.target.name]:e.target.value
+    })
+  }
+  const handleDate = (date)=>{
+    setSelectedDate(date)
+    setForm({
+      ...form,date
     })
   }
   const validate = ()=>{
@@ -83,7 +91,7 @@ export default function Home() {
                                 fluid
                                 label='name'
                                 name='name'
-                                placeholder="Ex:Ms.Lee"
+                                placeholder="Ex:Mr.Lee"
                                 error={errors.name?{ content:'Please enter a title',pointing:'below'}:null}
                                 id="err-name"
                                 onChange={handleChange}
@@ -117,6 +125,14 @@ export default function Home() {
                                 placeholder={errors.number}
                                 onChange={handleChange}
                                 />
+                                <DatePicker name='date'
+                                onChange={handleDate}
+                                selected={selectedDate}
+                                isClearable
+                                dateFormat='yyyy/MM/dd'
+                                filterDate={date=>date.getDay() != 1}
+                                showYearDropdown
+                                scrollableMonthYearDropdown></DatePicker>
                                 <Button type="submit">Submit</Button>
                             </Form>
           }
