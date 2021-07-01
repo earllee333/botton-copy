@@ -19,13 +19,15 @@ body {
   margin-top:60px;
 
 }
-.form {padding:10px;
+.form {padding:20px;
   color:rgb(99, 89, 89)
 }
 form input {padding:2px;margin:2px;}
-button {padding:10px;background:rgb(238, 236, 236)
-;opacity:0.5}
+button {background:rgb(238, 236, 236)
+;opacity:0.7s;position:relative;left:20px;top:8px}
 button:hover{background:red;;}
+
+#date-label{font-size:24px;position:relative;top:10px;padding:16px}
 
 footer{font-size:1px;
 margin-top:80px;

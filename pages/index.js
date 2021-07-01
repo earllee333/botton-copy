@@ -83,13 +83,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="form-container">
-        <h1>Create Note</h1>
+        <h1>Booking list</h1>
         <div>
             {isSubmitting ? <Loader active inline='centered'/>
                             :<Form onSubmit={handleSubmit}>
                               <Form.Input 
                                 fluid
-                                label='name'
+                                label='Name'
                                 name='name'
                                 placeholder="Ex:Mr.Lee"
                                 error={errors.name?{ content:'Please enter a title',pointing:'below'}:null}
@@ -99,7 +99,7 @@ export default function Home() {
                                  <Form.Input 
                                 fluid
                                 error={errors.email?{content:'Enter a email',pointing:'below'}:null}
-                                label='email'
+                                label='Email'
                                 id="err-email"
                                 name='email'
                                 type='email'
@@ -110,7 +110,7 @@ export default function Home() {
                                 fluid
                                 id="err-phone"
                                 error={errors.phone?{content:'Enter a phone',pointing:'below'}:null}
-                                label='phone'
+                                label='Phone'
                                 name='phone'
                                 placeholder={errors.phone}
 
@@ -119,12 +119,13 @@ export default function Home() {
                                  <Form.Input 
                                 fluid
                                 error={errors.number?{content:'Enter a number',pointing:'below'}:null}
-                                label='number'
+                                label='Member'
                                 id="err-number"
                                 name='number'
                                 placeholder={errors.number}
                                 onChange={handleChange}
                                 />
+                                <label id='date-label'>Date</label>
                                 <DatePicker name='date'
                                 onChange={handleDate}
                                 selected={selectedDate}
