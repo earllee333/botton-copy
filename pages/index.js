@@ -129,7 +129,6 @@ export default function Home() {
                                 <DatePicker name='date'
                                 onChange={handleDate}
                                 selected={selectedDate}
-                                isClearable
                                 dateFormat='yyyy/MM/dd'
                                 filterDate={date=>date.getDay() != 1}
                                 showYearDropdown
